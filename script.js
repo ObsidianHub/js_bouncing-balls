@@ -13,3 +13,10 @@ const Ball = function (x, y, radius) {
   this.x = x;
   this.y = y;
 };
+
+Ball.prototype = {
+  updatePosition: function (width, height) {
+    this.x += Math.cos(this.direction) * this.speed;
+    this.y += Math.sin(this.direction) * this.speed;
+  },
+};
