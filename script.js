@@ -56,3 +56,6 @@ Ball.prototype = {
 var context = document.querySelector("canvas").getContext("2d");
 
 var balls = new Array();
+
+let x = document.documentElement.clientWidth * 0.5;
+let y = document.documentElement.clientHeight * 0.5;
