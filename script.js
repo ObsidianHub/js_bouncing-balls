@@ -63,3 +63,13 @@ let y = document.documentElement.clientHeight * 0.5;
 for (let index = 0; index < 50; index++) {
   balls.push(new Ball(x, y, Math.floor(Math.random() * 10 + 20)));
 }
+
+function loop() {
+  window.requestAnimationFrame(loop);
+
+  let height = document.documentElement.clientHeight;
+  let width = document.documentElement.clientWidth;
+
+  context.canvas.height = height;
+  context.canvas.width = width;
+}
