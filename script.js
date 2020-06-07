@@ -34,5 +34,21 @@ Ball.prototype = {
         Math.cos(this.direction) * -1
       );
     }
+
+    if (this.y - this.radius < 0) {
+      this.y = this.radius;
+
+      this.direction = Math.atan2(
+        Math.sin(this.direction) * -1,
+        Math.cos(this.direction)
+      );
+    } else if (this.y + this.radius > height) {
+      this.y = height - this.radius;
+
+      this.direction = Math.atan2(
+        Math.sin(this.direction) * -1,
+        Math.cos(this.direction)
+      );
+    }
   },
 };
