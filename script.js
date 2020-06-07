@@ -18,5 +18,21 @@ Ball.prototype = {
   updatePosition: function (width, height) {
     this.x += Math.cos(this.direction) * this.speed;
     this.y += Math.sin(this.direction) * this.speed;
+
+    if (this.x - this.radius < 0) {
+      this.x = this.radius;
+
+      this.direction = Math.atan2(
+        Math.sin(this.direction),
+        Math.cos(this.direction) * -1
+      );
+    } else if (this.x + this.radius > width) {
+      this.x = width - this.radius;
+
+      this.direction = Math.atan2(
+        Math.sin(this.direction),
+        Math.cos(this.direction) * -1
+      );
+    }
   },
 };
