@@ -52,3 +52,7 @@ Ball.prototype = {
     }
   },
 };
+
+var context = document.querySelector("canvas").getContext("2d");
+
+var balls = new Array();
