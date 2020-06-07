@@ -59,3 +59,7 @@ var balls = new Array();
 
 let x = document.documentElement.clientWidth * 0.5;
 let y = document.documentElement.clientHeight * 0.5;
+
+for (let index = 0; index < 50; index++) {
+  balls.push(new Ball(x, y, Math.floor(Math.random() * 10 + 20)));
+}
