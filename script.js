@@ -72,4 +72,16 @@ function loop() {
 
   context.canvas.height = height;
   context.canvas.width = width;
+
+  /* I removed that - 1 after making the video. It's not neccessary. */
+  for (let index = 0; index < balls.length; index++) {
+    let ball = balls[index];
+
+    context.fillStyle = ball.color;
+    context.beginPath();
+    context.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
+    context.fill();
+
+    ball.updatePosition(width, height);
+  }
 }
