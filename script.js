@@ -85,3 +85,5 @@ function loop() {
     ball.updatePosition(width, height);
   }
 }
+
+loop();
